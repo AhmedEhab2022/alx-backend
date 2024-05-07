@@ -31,7 +31,7 @@ class LFUCache(BaseCaching):
             min_freq_keys = [k for k, v in freqDict.items() if v == min_freq]
             if len(freqDict) > 1:
                 for k in self._recentlyUsedKeys:
-                    if k in min_freq_keys: 
+                    if k in min_freq_keys:
                         self._LFU_key = k
                         break
             else:
