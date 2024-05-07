@@ -18,7 +18,7 @@ class FIFOCache(BaseCaching):
         """ Add an item in the cache
         """
         if key is None or item is None:
-            return
+            return None
 
         data = self.cache_data
         if len(data) == self.MAX_ITEMS and key not in data.keys():
