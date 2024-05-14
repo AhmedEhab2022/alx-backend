@@ -16,7 +16,6 @@ class Config:
 
 app = Flask(__name__)
 
-app.config.from_object(Config)
 babel = Babel(app, locale_selector=get_locale)
 
 
@@ -32,12 +31,6 @@ def get_locale():
 
 @app.route('/', strict_slashes=False)
 def hello_world():
-    """ Function to render a template """
-    return render_template('4-index.html')
-
-
-@app.route('/<locale>', strict_slashes=False)
-def hello_world_locale(locale):
     """ Function to render a template """
     return render_template('4-index.html')
 
