@@ -25,7 +25,7 @@ class Config:
 app = Flask(__name__)
 
 app.config.from_object(Config)
-babel = Babel(app, locale_selector=get_locale)
+babel = Babel(app)
 
 
 @babel.localeselector
