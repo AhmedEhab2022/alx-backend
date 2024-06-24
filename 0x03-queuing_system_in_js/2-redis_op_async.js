@@ -1,5 +1,4 @@
-//import redis from 'redis';
-import { createClient } from 'redis';
+import redis from 'redis';
 import { promisify } from 'util';
 
 const client = createClient();
