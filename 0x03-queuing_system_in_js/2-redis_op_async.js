@@ -5,13 +5,10 @@ const client = createClient();
 
 client.on('connect', () => {
   console.log('Redis client connected to the server');
-  displaySchoolValue('Holberton');
-  setNewSchool('HolbertonSanFrancisco', '100');
-  displaySchoolValue('HolbertonSanFrancisco');
 });
 
 client.on('error', (error) => {
-  console.error(`Redis client not connected to the server: ${error}`);
+  console.log(`Redis client not connected to the server: ${error}`);
 });
 
 const setNewSchool = (schoolName, value) => {
@@ -28,3 +25,7 @@ const displaySchoolValue = async (schoolName) => {
     console.error(error);
   }
 };
+
+displaySchoolValue('Holberton');
+setNewSchool('HolbertonSanFrancisco', '100');
+displaySchoolValue('HolbertonSanFrancisco');

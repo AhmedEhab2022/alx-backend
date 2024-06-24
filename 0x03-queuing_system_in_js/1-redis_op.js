@@ -18,11 +18,12 @@ const displaySchoolValue = (schoolName) => {
 
 client.on('connect', () => {
   console.log('Redis client connected to the server');
-  displaySchoolValue('Holberton');
-  setNewSchool('HolbertonSanFrancisco', '100');
-  displaySchoolValue('HolbertonSanFrancisco');
 });
 
 client.on('error', (error) => {
-  console.error(`Redis client not connected to the server: ${error}`);
+  console.log(`Redis client not connected to the server: ${error}`);
 });
+
+displaySchoolValue('Holberton');
+setNewSchool('HolbertonSanFrancisco', '100');
+displaySchoolValue('HolbertonSanFrancisco');
